@@ -1,6 +1,6 @@
 <template>
   <transition name="message" v-if='isShow'>
-    <div class="loli-messag-box">
+    <div class="vui-messag-box">
       <slot>{{text}}</slot>
     </div>
   </transition>
@@ -9,7 +9,7 @@
 <script>
 
 export default {
-  name: 'loli-message',
+  name: 'vui-message',
   props: {
     type: {
       type: String,
@@ -39,7 +39,7 @@ export default {
     close() {
       setTimeout(() => {
         this.isShow = false;
-        this.$emit('messageCb',true);
+        this.$emit('messageCb', true);
       }, this.time);
     },
   },
@@ -58,7 +58,7 @@ $fontColor = #fff;
   opacity: 0;
 }
 
-.loli-messag-box {
+.vui-messag-box {
   padding: 10px;
   position: fixed;
   top: 50%;

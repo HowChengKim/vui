@@ -3,19 +3,19 @@
     :is="tag"
     :type="nativeType"
     :disabled="disabled"
-    class="loli-button"
+    class="vui-button"
     :class="[
-      'loli-button--' + type,
-      'loli-button--' + size,
+      'vui-button--' + type,
+      'vui-button--' + size,
       {
-        'loli-button--disabled': disabled,
-        'loli-button--loading': loading,
-        'loli-button--block': block
+        'vui-button--disabled': disabled,
+        'vui-button--loading': loading,
+        'vui-button--block': block
       }
     ]"
     @click="onClick"
   >
-    <span class="loli-button__text">
+    <span class="vui-button__text">
       <slot>{{ text }}</slot>
     </span>
   </component>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'loli-button',
+  name: 'vui-button',
   props: {
     text: String,
     block: Boolean,
@@ -59,7 +59,7 @@ export default {
   $primaryColor = #0469c8
   $warningColor = #e94f4f
   // 按钮基本样式
-  .loli-button
+  .vui-button
     display inline-block
     text-align center
     padding 13px 0
@@ -115,6 +115,6 @@ export default {
       width 100%
 
   // 默认按钮的禁用字体颜色
-  .loli-button--default.loli-button--disabled
+  .vui-button--default.vui-button--disabled
     color #000
 </style>

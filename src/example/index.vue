@@ -1,25 +1,20 @@
 <template>
   <div id="example">
     <div class="header">
-        <img class="logo" src="../assets/lolita-logo.jpeg"/>
-        <br/>
-        <p class="words">{{ msg }}</p>
+      <img class="logo" src="../assets/logo.png" />
+      <br/>
+      <p class="words">{{ msg }}</p>
     </div>
-    <loli-accordion title="基础组件" show>
-      <template v-for="item in routers.base">
-        <loli-accordion-item :key="item.text">
-          <router-link :to="{ path: item.path}">{{item.text}}</router-link>
-        </loli-accordion-item>
-      </template>
-    </loli-accordion>
-
-    <loli-accordion title="表单">
-      <template v-for="item in routers.form">
-        <loli-accordion-item :key="item.text">
-          <router-link :to="{ path: item.path}">{{item.text}}</router-link>
-        </loli-accordion-item>
-      </template>
-    </loli-accordion>
+    <div v-for="item in routers.base" :key="item.text">
+      <vui-button type="default" tag="button" size="large">
+        <router-link :to="{ path: item.path}">{{item.text}}</router-link>
+      </vui-button>
+    </div>
+    <div v-for="item in routers.form" :key="item.text">
+      <vui-button type="default" tag="button" size="large">
+        <router-link :to="{ path: item.path}">{{item.text}}</router-link>
+      </vui-button>
+    </div>
   </div>
 </template>
 <script>
@@ -30,10 +25,6 @@ export default {
       routers: {
         // 基础组件
         base: [
-          {
-            text: 'Header - 头部',
-            path: 'Header'
-          },
           {
             text: 'Dialog - 对话框',
             path: 'dialog'
@@ -49,16 +40,16 @@ export default {
             path: 'button'
           },
           {
-
             text: 'Header - 头部',
             path: 'Header'
-          },
+          }
         ]
       },
-      msg: 'vui 组件库',
+      msg: 'vui 组件库'
     };
   },
   mounted() {
+
   }
 };
 </script>
@@ -66,7 +57,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
 #example {
-  .loli-accordion-group {
+  .vui-button {
     margin-bottom: 10px;
   }
 

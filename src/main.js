@@ -4,18 +4,9 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import 'lib-flexible';
+import Vui from '@/components';
 
-import Button from '@/components/button';
-import Header from '@/components/header';
-import Dialog from '@/components/dialog';
-import Message from '@/components/message';
-
-Vue.component('loli-header', Header);
-Vue.component('loli-button', Button);
-Vue.component('loli-dialog', Dialog);
-Vue.component('loli-message', Message);
-
-
+Vue.use(Vui);
 Vue.config.productionTip = false;
 /* eslint-disable no-new */
 

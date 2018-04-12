@@ -1,11 +1,11 @@
 <template>
   <div id="headerExample">
-    <loli-button type="primary" tag="button" size="large" @click="showOne">一个按钮的弹框</loli-button>
-    <loli-button type="primary" tag="button" size="large" @click="showTwo">两个按钮的弹框</loli-button>
-    <loli-button type="primary" tag="button" size="large" @click="showTitle">带标题的弹框</loli-button>
-    <loli-dialog @status="getOneStatus" :show="isShowOne">只有一个按钮</loli-dialog>
-    <loli-dialog @status="getTwoStatus" :show="isShowTwo" isTwo>两个按钮</loli-dialog>
-    <loli-dialog @status="getTitleStatus" :show="isShowTitle" isTwo :title="'带标题的'">带标题的两个按钮</loli-dialog>
+    <vui-button type="primary" tag="button" size="large" @click="showOne">一个按钮的弹框</vui-button>
+    <vui-button type="primary" tag="button" size="large" @click="showTwo">两个按钮的弹框</vui-button>
+    <vui-button type="primary" tag="button" size="large" @click="showTitle">带标题的弹框</vui-button>
+    <vui-dialog @status="getOneStatus" :show="isShowOne">只有一个按钮</vui-dialog>
+    <vui-dialog @status="getTwoStatus" :show="isShowTwo" isTwo>两个按钮</vui-dialog>
+    <vui-dialog @status="getTitleStatus" :show="isShowTitle" isTwo :title="'带标题的'">带标题的两个按钮</vui-dialog>
   </div>
 </template>
 <script>
@@ -48,7 +48,7 @@ export default {
 #headerExample {
   margin: 10px;
 
-  .loli-button {
+  .vui-button {
     margin-bottom: 10px;
   }
 }

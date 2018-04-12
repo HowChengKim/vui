@@ -1,15 +1,15 @@
 <template>
   <transition name="fade">
-     <div class="loli-dialog-box" v-if="isShow">
-     <div class="mask"></div>
-     <div class="loli-dialog-content">
-       <div class="loli-dialog-title" v-if="title">{{title}}</div>
-        <div class="loli-dialog-context">
-         <slot>{{text}}</slot>
-       </div>
-       <div class="loli-dialog-footer" :class="{'isTwoBtn':isTwo}">
-         <button class="loli-dialog-button cancel" @click="hide(false)">取消</button>
-          <button class="loli-dialog-button confirm" @click="hide(true)">确定</button>
+    <div class="vui-dialog-box" v-if="isShow">
+      <div class="mask"></div>
+      <div class="vui-dialog-content">
+        <div class="vui-dialog-title" v-if="title">{{title}}</div>
+        <div class="vui-dialog-context">
+          <slot>{{text}}</slot>
+        </div>
+        <div class="vui-dialog-footer" :class="{'isTwoBtn':isTwo}">
+          <button class="vui-dialog-button cancel" @click="hide(false)">取消</button>
+          <button class="vui-dialog-button confirm" @click="hide(true)">确定</button>
         </div>
       </div>
     </div>
@@ -17,7 +17,7 @@
 </template>
 <script>
 export default {
-  name: 'loli-dialog',
+  name: 'vui-dialog',
   props: {
     show: Boolean,
     text: String,
@@ -64,7 +64,7 @@ $Zindex = 999;
 $confirmColor = #00C000;
 $contextColor = #999;
 
-.loli-dialog-box {
+.vui-dialog-box {
   position: fixed;
   top: 0;
   left: 0;
@@ -83,7 +83,7 @@ $contextColor = #999;
     z-index: $Zindex + 1;
   }
 
-  .loli-dialog-content {
+  .vui-dialog-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -96,20 +96,20 @@ $contextColor = #999;
     background-color: #fff;
     font-size: 16px;
 
-    .loli-dialog-title {
+    .vui-dialog-title {
       font-weight: 400;
       text-align: center;
       padding: 15px 0 0;
     }
 
-    .loli-dialog-context {
+    .vui-dialog-context {
       line-height: 1.5;
       padding: 15px 20px;
       font-size: 14px;
       color: $contextColor;
     }
 
-    .loli-dialog-footer {
+    .vui-dialog-footer {
       overflow: hidden;
       border-top: 1px solid #e5e5e5;
 
@@ -126,7 +126,7 @@ $contextColor = #999;
         outline: none;
       }
 
-      .loli-dialog-button {
+      .vui-dialog-button {
         border: 0;
 
         &.cancel {
@@ -142,7 +142,7 @@ $contextColor = #999;
       &.isTwoBtn {
         display: flex;
 
-        .loli-dialog-button {
+        .vui-dialog-button {
           flex: 1;
 
           &.cancel {

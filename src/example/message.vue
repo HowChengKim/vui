@@ -1,9 +1,9 @@
 <template>
   <div id="messageExample">
-    <loli-button type="primary" tag="button" size="large" @click="showIt1">自动消失（默认500毫秒）</loli-button>
-    <loli-message :text="text" :show="status1" @messageCb='messageCb1'/>
-    <loli-button type="primary" tag="button" size="large" @click="showIt2">2秒后消失</loli-button>
-    <loli-message :text="text" :time="2000" :show="status2" @messageCb='messageCb2'/>
+    <vui-button type="primary" tag="button" size="large" @click="showIt1">自动消失（默认500毫秒）</vui-button>
+    <vui-message :text="text" :show="status1" @messageCb='messageCb1' />
+    <vui-button type="primary" tag="button" size="large" @click="showIt2">2秒后消失</vui-button>
+    <vui-message :text="text" :time="2000" :show="status2" @messageCb='messageCb2' />
   </div>
 </template>
 <script>
@@ -35,7 +35,7 @@ export default {
 #messageExample {
   margin: 10px;
 
-  .loli-button {
+  .vui-button {
     margin-bottom: 10px;
   }
 }
